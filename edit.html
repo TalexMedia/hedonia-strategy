@@ -795,11 +795,11 @@ window.addEventListener("load", function(){
   }
 
   function save(){
-    if(!wrap) return;
+    if(!wrap) return Promise.resolve();
     var html = wrap.innerHTML;
     try { localStorage.setItem(LOCAL_KEY, html); } catch(e){}
     setStatus('Saving…');
-    saveDraft(html).then(function(){
+    return saveDraft(html).then(function(){
       setStatus('Saved to cloud just now', 'saved');
     }).catch(function(){
       setStatus('Cloud offline — kept in this browser only', 'warn');
@@ -948,9 +948,11 @@ window.addEventListener("load", function(){
 
   document.getElementById('tm-publish').addEventListener('click', function(){
     if(!confirm('Publish your edits to the live page?\n\nThis updates the page at the main link straight away.')) return;
+    // Flush the pending draft save FIRST, then publish. Running both at once
+    // lets the save's "Saved to cloud" message land after the publish result
+    // and overwrite it, so the click looks like it did nothing.
     clearTimeout(saveTimer);
-    save();
-    publishLive();
+    save().then(publishLive);
   });
 
 })();
