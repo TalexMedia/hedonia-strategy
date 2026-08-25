@@ -234,6 +234,46 @@ body{background:var(--bg);min-height:100vh}
   body{background:#fff}
   .topbar-cta,.cta-primary{display:none}
 }
+
+/* ── proof-led concept cards ────────────────────────────────────── */
+.scale-label{display:block;font-family:'Oswald',sans-serif;font-size:10px;font-weight:600;
+  letter-spacing:0.14em;text-transform:uppercase;color:var(--o);margin-bottom:6px}
+.prec{margin-top:0.85rem;padding:0.95rem 1rem 0.85rem;border:1px solid var(--border);
+  border-radius:8px;background:var(--bg)}
+.prec-label{font-family:'Oswald',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.12em;
+  text-transform:uppercase;color:var(--txt3);margin-bottom:0.7rem}
+.prec-spec{margin:0 0 0.9rem;display:grid;grid-template-columns:auto 1fr;gap:0.35rem 0.9rem}
+.prec-spec dt{font-family:'Oswald',sans-serif;font-size:10.5px;font-weight:500;letter-spacing:0.07em;
+  text-transform:uppercase;color:var(--txt3);white-space:nowrap;padding-top:2px}
+.prec-spec dd{margin:0;font-size:13px;color:var(--txt2);line-height:1.6}
+.proj-video-embed{position:relative;width:100%;aspect-ratio:16/9;background:#141414;
+  border-radius:8px;overflow:hidden;margin-bottom:0.85rem}
+.proj-video-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;display:block}
+.video-facade{cursor:pointer}
+.vf-thumb{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block}
+.vf-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:58px;height:40px;
+  border-radius:9px;background:rgba(20,20,20,0.82);display:block}
+.vf-play:after{content:"";position:absolute;top:50%;left:52%;transform:translate(-50%,-50%);
+  border-style:solid;border-width:8px 0 8px 14px;border-color:transparent transparent transparent #fff}
+.video-facade:hover .vf-play{background:var(--o)}
+.vf-title{position:absolute;left:0;right:0;bottom:0;padding:0.5rem 0.7rem;font-size:11px;
+  font-family:'Oswald',sans-serif;letter-spacing:0.05em;text-transform:uppercase;color:#fff;
+  background:linear-gradient(to top,rgba(0,0,0,0.78),rgba(0,0,0,0))}
+.stat-strip-sm{margin:0 0 0.75rem!important}
+.stat-strip-sm .stat-num{font-size:26px}
+.stat-strip-sm .stat-cell{padding:0.65rem 0.5rem}
+.prec-note{margin:0;font-size:12px;color:var(--txt3);line-height:1.65}
+.prec-note a{color:var(--o);text-decoration:none;border-bottom:1px solid rgba(232,90,12,0.35)}
+.apply{margin-top:1rem;padding-left:0.95rem;border-left:2px solid var(--o)}
+.apply-label{font-family:'Oswald',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.12em;
+  text-transform:uppercase;color:var(--o);margin-bottom:0.42rem}
+.apply p{margin:0 0 0.45rem;font-size:13.5px;color:var(--txt2);line-height:1.7}
+.apply p:last-child{margin-bottom:0}
+.apply-names{font-size:12.5px!important;color:var(--txt3)!important}
+.apply-names strong{color:var(--txt);font-weight:500}
+@media(max-width:640px){.prec-spec{grid-template-columns:1fr;gap:0.15rem}
+  .prec-spec dt{padding-top:6px}}
+
 </style>
 </head>
 <body>
@@ -300,6 +340,21 @@ body{background:var(--bg);min-height:100vh}
       <a class="topbar-cta" href="https://calendly.com/d/ct7b-xvd-c9x/intro-call" target="_blank" rel="noopener">Book a Call</a>
     </div>
   </nav>
+
+  <section class="vsl-intro">
+    <style>
+      .vsl-intro{margin:1.75rem 0 0}
+      .vsl-intro .vsl-eyebrow{font-family:'Oswald',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--o);margin-bottom:0.6rem;display:flex;align-items:center;gap:8px}
+      .vsl-intro .vsl-eyebrow::before{content:"\25B6";font-size:10px}
+      .vsl-intro .vsl-frame{position:relative;width:100%;padding-top:56.25%;border-radius:10px;overflow:hidden;border:1px solid var(--border);background:#000}
+      .vsl-intro .vsl-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    </style>
+    <div class="vsl-eyebrow">Watch First · A Short Intro From Tom</div>
+    <div class="vsl-frame">
+      <iframe src="https://player.vimeo.com/video/1199563685?h=9a37ee9528&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Talex Mini VSL"></iframe>
+    </div>
+  </section>
+  <script src="https://player.vimeo.com/api/player.js"></script>
 
   <header class="hero">
     <div class="brand-mark-row">
@@ -477,7 +532,7 @@ body{background:var(--bg);min-height:100vh}
       <span class="section-eyebrow">Three Concepts For Hedonia</span>
     </div>
     <h2 class="section-title">Three Opportunities to Grow Your Audience</h2>
-    <p class="section-subtitle">One flagship series, one short taco drama, and one film built on your expertise and credibility. We are a fully integrated end-to-end solution so you can start wherever you are most comfortable.</p>
+    <p class="section-subtitle">One flagship documentary series, one shorter format, and one single film. Each one names the format, the show it borrows from, and a company that has already made it work. We film and produce at every level, so where you start is up to you.</p>
   </div>
 
   <div class="ideas-grid">
@@ -485,9 +540,10 @@ body{background:var(--bg);min-height:100vh}
     <div class="idea-card idea-card-featured">
       <div class="idea-num">01</div>
       <div class="idea-body">
-        <div style="display:block;font-family:'Oswald',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--o);margin-bottom:6px">Long-Form Episodic · Flagship, ongoing</div>
-        <div class="idea-title">"The Missing Link"</div>
-        <div class="idea-desc">One in five people live with depression, and yet they often feel alone. Hedonia addresses the missing link: a nutritional deficiency that diet alone can't fix. This series follows one real person per episode who lives with depression, and Dr. Vuckovic walks them through the science that connects their experience to the chemistry.<br><br>Each episode opens with the person: where they are, what the low days feel like, what they've tried. Then Dr. Vuckovic appears as the guide. He explains in plain words how SAMe, L-methylfolate, and EPA omega-3 address the deficiency linked to depression, and what the clinical research shows. You meet someone who has lived it, and you are there when a doctor tells them what was happening in their brain.<br><br><em>The Me You Can't See (the documentary series from Oprah Winfrey and Prince Harry)</em> let people living with mental health conditions speak plainly, and it made millions of strangers care. <em>The Missing Link</em> gives the people Hedonia serves that same chance to speak plainly, and adds a doctor who can explain why it is not their fault.</div>
+        <div class="scale-label">Long-Form Episodic &middot; Flagship, ongoing</div>
+        <div class="idea-title">A returning documentary series</div>
+        <div class="prec"><div class="prec-label">The format, and a company that has already run it</div><dl class="prec-spec"><dt>Format</dt><dd>Docuseries. One real person per episode, followed long enough that a stranger cares what happens to them.</dd><dt>Entertainment reference</dt><dd><em>Diagnosis</em> (the Netflix documentary series that follows one patient with a mystery illness per episode while Dr. Lisa Sanders searches for an answer)</dd><dt>A company that did it</dt><dd>Cleveland Clinic, <em>A Century of Care</em>. A hospital system put its own patients and caregivers on camera to say what happened to them, made with Courageous Studios, the brand studio inside CNN.</dd><dt>Episode length</dt><dd>38 minutes for the full film, cut down into four shorter chapters</dd></dl><div class="proj-video-embed video-facade" data-yt="SeWEXQHD5ec" role="button" tabindex="0" aria-label="Play video: A Century of Care, Cleveland Clinic"><img class="vf-thumb" src="https://i.ytimg.com/vi/SeWEXQHD5ec/hqdefault.jpg" alt="" onerror="this.style.display='none'"><span class="vf-play" aria-hidden="true"></span><span class="vf-title">A Century of Care &middot; Cleveland Clinic</span></div><div class="stat-strip stat-strip-sm"><div class="stat-cell"><div class="stat-num">79,287</div><div class="stat-label">Views On The Film</div></div><div class="stat-cell"><div class="stat-num">HLN, CNN, Hulu</div><div class="stat-label">Where It Ran</div></div><div class="stat-cell"><div class="stat-num">2022</div><div class="stat-label">NYX Awards Grand Winner</div></div></div><p class="prec-note">Each chapter takes one element of care and shows what it changes for a patient. Runtime and view count read from YouTube on 24 August 2026. <a href="https://www.youtube.com/playlist?list=PLMG0zKOgNqNl7rwF1XUggRn7IOr9v7ejJ" target="_blank" rel="noopener">Watch the series</a></p></div>
+        <div class="apply"><div class="apply-label">How Hedonia could use it</div><p>One person an episode who lives with depression tells their own story in their own words. Dr. Vuckovic explains what the nutritional gap actually is and what changed. The category is sensitive, so nobody appears without consent and nobody is turned into a case study.</p><p class="apply-names">Possible names: <strong>In Their Own Words</strong>, <strong>One in Five</strong>, <strong>What Changed</strong></p></div>
         <div class="why-block">
           <div class="why-label">Why long-form episodic wins over time</div>
           <div class="why-list">
@@ -502,9 +558,10 @@ body{background:var(--bg);min-height:100vh}
     <div class="idea-card">
       <div class="idea-num">02</div>
       <div class="idea-body">
-        <div style="display:block;font-family:'Oswald',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--o);margin-bottom:6px">Short-Form Episodic · The Taco Drama</div>
-        <div class="idea-title">"The Care Line"</div>
-        <div class="idea-desc">It is 9:02 on a Tuesday morning, and the customer care line at a medical food company is already three calls deep. The caller on hold wants to know if they can take the capsules with their antidepressant. The caller on line one is asking whether "medical food" means it's a drug. And the phone keeps ringing, because the questions people have about a medical food do not fit on a label.<br><br>A <em>'Taco Drama'</em> is a short scripted series designed to be easy to consume on the go. <em>The Care Line</em> is a workplace comedy set in the customer care office of Hedonia, one caller question per episode, at the worst possible time. Episodes run a minute or two, shot vertical for phones and widescreen for YouTube and your website. A company whose own channel already answers "Is it a drug?" and "Should I keep taking my antidepressant?" knows this office never runs out of material.<br><br>The office runs on four people at four desks. Rosa has worked the line for years and takes every question seriously, even the ones she has answered nine times that morning. Marcus owns the product knowledge, and he will explain the difference between a medical food and a supplement whether or not you asked. Dee handles compliance, where every answer has to be true and every claim has to be careful. And Sam answers the calls with a calm voice and a headset held together by tape. Every week a new question comes down the line: can I take this with my meds, does it interact with coffee, will it work if I've tried everything else. The four of them get the caller an answer that is true, kind and careful, before the next call comes in.<br><br><em>Abbott Elementary (the comedy set in a Philadelphia public school)</em> proved a workplace show can love the work while it laughs at the workday. And <em>Superstore (the sitcom where a store's staff face one absurd situation a week and everything resets by the next episode)</em> proved that a workplace with problems walking in the door is a comedy engine that never runs out. A customer care professional anywhere gets a laugh at a call she has lived, and a person living with depression gets to see a company that treats their questions with kindness and humor.</div>
+        <div class="scale-label">Short-Form Episodic &middot; Animated comedy, under 2 minutes</div>
+        <div class="idea-title">A short scripted comedy</div>
+        <div class="prec"><div class="prec-label">The format, and a company that has already run it</div><dl class="prec-spec"><dt>Format</dt><dd>Sitcom. A fixed cast, one problem an episode, resolved by the end of it. A 'Taco Drama' is a short scripted series designed to be easy to consume on the go.</dd><dt>Entertainment reference</dt><dd><em>Abbott Elementary</em> (the comedy set in a Philadelphia public school) and <em>Superstore</em> (the sitcom where a store's staff face one absurd situation a week and everything resets by the next episode)</dd><dt>A company that did it</dt><dd>Denny's, <em>The Grand Slams</em>. The restaurant turned the items on its own breakfast menu into an animated cast with distinct personalities, and gave them a scripted series rather than an advert.</dd><dt>Episode length</dt><dd>48 seconds for the first episode</dd></dl><div class="proj-video-embed video-facade" data-yt="VXZ9WrW2lM8" role="button" tabindex="0" aria-label="Play video: The Grand Slams Episode 1, Denny's"><img class="vf-thumb" src="https://i.ytimg.com/vi/VXZ9WrW2lM8/hqdefault.jpg" alt="" onerror="this.style.display='none'"><span class="vf-play" aria-hidden="true"></span><span class="vf-title">Episode 1, Breakfast Club &middot; The Grand Slams</span></div><div class="stat-strip stat-strip-sm"><div class="stat-cell"><div class="stat-num">538,671</div><div class="stat-label">Views, Episode One</div></div><div class="stat-cell"><div class="stat-num">727,089</div><div class="stat-label">Views, The Trailer</div></div><div class="stat-cell"><div class="stat-num">48 sec</div><div class="stat-label">Episode Length</div></div></div><p class="prec-note">Denny's built the series around characters rather than menu items, which is why it runs as a comedy and not an advert. Animation also means a scripted series can be made for a subject that cannot be filmed. Runtime and counts read from YouTube on 24 August 2026. <a href="https://www.youtube.com/watch?v=VXZ9WrW2lM8" target="_blank" rel="noopener">Watch episode one</a></p></div>
+        <div class="apply"><div class="apply-label">How Hedonia could use it</div><p>The same format runs on your customer care line, drawn rather than filmed so no real caller is ever the joke. Each episode gives one question to a team that takes it seriously, and the comedy comes from the working day, never from anyone who rang.</p><p class="apply-names">Possible names: <strong>The Care Line</strong>, <strong>Line One</strong>, <strong>The Morning Shift</strong></p></div>
         <div class="why-block">
           <div class="why-label">Why short-form drama is worth the bet</div>
           <div class="why-list">
@@ -519,9 +576,10 @@ body{background:var(--bg);min-height:100vh}
     <div class="idea-card">
       <div class="idea-num">03</div>
       <div class="idea-body">
-        <div style="display:block;font-family:'Oswald',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--o);margin-bottom:6px">A Single Film · one-time</div>
-        <div class="idea-title">"The 30 Years Behind One Capsule"</div>
-        <div class="idea-desc">A psychiatrist sits in his office and talks about the patients he has treated for more than thirty years, and the supplements he watched them waste money on. Then he explains what he built instead: a medical food that delivers three clinically studied nutrients in the amounts the research says matter.<br><br><em>The 30 Years Behind One Capsule</em> is a single film built around Dr. Vuckovic, the founder and chief scientific officer of Hedonia. He is the credibility the whole company stands on, and the most-watched video on your channel is already the one where he tells the Hedonia story. This film gives that story the production it deserves: the founder on camera, the science explained plainly, and the patients who feel like themselves again. The finished film goes on the homepage and the Science page, where the people who need it are already reading.<br><br>A person deciding whether to trust a product for their depression gets to hear from the doctor who created it, in his own words, before they decide anything.</div>
+        <div class="scale-label">A Single Film &middot; one-time</div>
+        <div class="idea-title">One film that answers one question</div>
+        <div class="prec"><div class="prec-label">The format, and a company that has already run it</div><dl class="prec-spec"><dt>Format</dt><dd>Explainer. One honest question, answered by opening the doors and filming the work.</dd><dt>Entertainment reference</dt><dd><em>How It's Made</em> (the series that follows a single product along the line from raw material to finished item)</dd><dt>A company that did it</dt><dd>McDonald's, <em>Our Food. Your Questions.</em> The company took the questions people were actually asking about its food, including the hostile ones, and answered them by filming inside its own plants.</dd><dt>Episode length</dt><dd>2 minutes 44 seconds for the most watched answer</dd></dl><div class="proj-video-embed video-facade" data-yt="Ua5PaSqKD6k" role="button" tabindex="0" aria-label="Play video: Pink goop in Chicken McNuggets, McDonald's Canada answers"><img class="vf-thumb" src="https://i.ytimg.com/vi/Ua5PaSqKD6k/hqdefault.jpg" alt="" onerror="this.style.display='none'"><span class="vf-play" aria-hidden="true"></span><span class="vf-title">Pink goop in Chicken McNuggets? &middot; McDonald's</span></div><div class="stat-strip stat-strip-sm"><div class="stat-cell"><div class="stat-num">5.85M</div><div class="stat-label">Views, Top Answer</div></div><div class="stat-cell"><div class="stat-num">3.51M</div><div class="stat-label">Views, The Beef Film</div></div><div class="stat-cell"><div class="stat-num">Own Plants</div><div class="stat-label">Where It Was Filmed</div></div></div><p class="prec-note">The most watched film in the series answers whether Chicken McNuggets are made from pink goop by walking through the plant that makes them. Runtime and counts read from YouTube on 24 August 2026. <a href="https://www.youtube.com/playlist?list=PLB8F066AFA8915464" target="_blank" rel="noopener">Watch the series</a></p></div>
+        <div class="apply"><div class="apply-label">How Hedonia could use it</div><p>One film covers the thirty years behind the capsule: the psychiatrist who spent them, the patients he watched waste money on supplements, and the formulation he built instead. The film answers the question people ask before they trust a medical food with their mental health: who built the capsule, and why.</p><p class="apply-names">Possible names: <strong>The 30 Years Behind One Capsule</strong>, <strong>Thirty Years In</strong>, <strong>Why He Built It</strong></p></div>
         <div class="why-block">
           <div class="why-label">Why one film is worth making on its own</div>
           <div class="why-list">
@@ -725,6 +783,10 @@ body{background:var(--bg);min-height:100vh}
     <div class="faq-a">We start with the community, not the camera. Before any production decision, we map who you're speaking to, what they need from you, and what shift we're trying to produce in them. Format and craft follow from there.</div>
   </div>
   <div class="faq-item">
+    <div class="faq-q">Do you only work with certain industries?</div>
+    <div class="faq-a">At Talex, we don’t limit our focus to one vertical or industry, because industry-specific thinking leads to uniform outputs and our goal is to help our clients stand out from their competition.<br><br>Ultimately, a cross-disciplinary perspective forces innovation and creates more original ideas. Because we are not tied to the conventions of one industry, we can do a better job of helping you create content authentic to your brand and valuable to your audience. So you stand out and remain top of mind for your customers.</div>
+  </div>
+  <div class="faq-item">
     <div class="faq-q">You'd be filming around a regulated product. Is that a problem?</div>
     <div class="faq-a">No. Hedonia is a medical food, not a drug, and its claims already live on your site within regulatory bounds. We keep every script true to what the science and the label support, and compliance stays in your hands. The format ideas in section 02 deliberately keep the storytelling with real people and the care team, never with invented medical claims.</div>
   </div>
@@ -752,45 +814,50 @@ window.addEventListener("load", function(){
 </script>
 
 
-<script id="tm-live-loader">
+
+<script>
 (function(){
-  var DB = 'https://talex-media-default-rtdb.firebaseio.com', KEY = 'hedonia-31bf265f', BAKED = '';
-  var wrap = document.querySelector('#wrap');
-  if(!wrap || !window.fetch) return;
-  fetch(DB + '/published/' + KEY + '.json', {cache: 'no-store'})
-    .then(function(r){ return r.ok ? r.json() : null; })
-    .then(function(p){
-      if(!p || !p.html || !p.version) return;
-      if(p.version === BAKED) return;   // already baked into this file
-      var tmp = document.createElement('div');
-      tmp.innerHTML = p.html;
-      tmp.querySelectorAll('[contenteditable]').forEach(function(el){
-        el.removeAttribute('contenteditable');
-        el.removeAttribute('data-tmedit');
-        el.classList.remove('tm-edit');
-        if(!el.getAttribute('class')) el.removeAttribute('class');
-      });
-      tmp.querySelectorAll('.tm-chip').forEach(function(el){ el.remove(); });
-      tmp.querySelectorAll('.tm-idea').forEach(function(el){
-        el.classList.remove('tm-idea');
-        if(!el.getAttribute('class')) el.removeAttribute('class');
-      });
-      var bar = tmp.querySelector('#tm-bar'); if(bar) bar.remove();
-      wrap.innerHTML = tmp.innerHTML;
-    })
-    .catch(function(){});
+  function load(el){
+    if(el.getAttribute("data-loaded")) return;
+    var id = el.getAttribute("data-yt");
+    var f = document.createElement("iframe");
+    f.setAttribute("src","https://www.youtube-nocookie.com/embed/"+id+"?autoplay=1&rel=0");
+    f.setAttribute("title","Video player");
+    f.setAttribute("allow","accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
+    f.setAttribute("allowfullscreen","");
+    el.innerHTML = ""; el.appendChild(f); el.setAttribute("data-loaded","1");
+  }
+  document.querySelectorAll(".video-facade").forEach(function(el){
+    el.addEventListener("click", function(){ load(el); });
+    el.addEventListener("keydown", function(ev){
+      if(ev.key === "Enter" || ev.key === " "){ ev.preventDefault(); load(el); }
+    });
+  });
 })();
 </script>
-
 <script id="tm-edit-js">
 
 (function(){
-  var DOC_KEY = 'hedonia-31bf265f';
-  var LOCAL_KEY = 'talex-edit:' + DOC_KEY;
+  var DOC_KEY = 'hedonia-v2-24867e91';
+  var BUILD_ID = 'bb8c60fdf2ec';
+  // The browser-local draft is keyed to the BUILD, not just the doc. When a doc is
+  // rebuilt and redeployed under the same doc key, an old localStorage draft would
+  // otherwise repaint itself over the new page a moment after load, which looks
+  // exactly like the deploy having failed. Keying on the build makes a stale draft
+  // unreachable, and any draft from a previous build is cleared on load.
+  var LOCAL_KEY = 'talex-edit:' + DOC_KEY + ':' + BUILD_ID;
+  try {
+    for (var i = localStorage.length - 1; i >= 0; i--) {
+      var k = localStorage.key(i);
+      if (k && k.indexOf('talex-edit:' + DOC_KEY) === 0 && k !== LOCAL_KEY) {
+        localStorage.removeItem(k);
+      }
+    }
+  } catch(e){}
   // Carousel decks (tools/deck-unbundle.mjs) carry their text in inline-styled
   // spans inside .slide sections, so the tag list below would miss most of a
   // deck. Scoped to .slide so a bare span stays uneditable in strategy docs.
-  var EDIT_SEL = '.slide span, .slide em, p, li, h1, h2, h3, h4, .idea-title, .idea-desc, .idea-tag, .why-label, .why-item, .stat-num, .stat-label, .channel-name, .channel-handle, .channel-snippet, .cs-section-label, .cs-section-body, .cs-stat-num, .cs-stat-label, .cs-name, .cs-footer-meta, .cred-chip, .faq-q, .faq-a, .cta-eyebrow, .cta-headline, .cta-sub, .cta-reply, .callout p, .callout-attr, .hero-eyebrow, .hero-title, .hero-tagline, .section-title, .section-subtitle';
+  var EDIT_SEL = '.scale-label, .prec-spec dd, .apply-label, .slide span, .slide em, p, li, h1, h2, h3, h4, .idea-title, .idea-desc, .idea-tag, .why-label, .why-item, .stat-num, .stat-label, .channel-name, .channel-handle, .channel-snippet, .cs-section-label, .cs-section-body, .cs-stat-num, .cs-stat-label, .cs-name, .cs-footer-meta, .cred-chip, .faq-q, .faq-a, .cta-eyebrow, .cta-headline, .cta-sub, .cta-reply, .callout p, .callout-attr, .hero-eyebrow, .hero-title, .hero-tagline, .section-title, .section-subtitle';
   var wrap = document.querySelector('#wrap');
   var statusEl = document.getElementById('tm-status');
   var saveTimer = null;
@@ -814,6 +881,24 @@ window.addEventListener("load", function(){
       el.setAttribute('contenteditable', 'true');
       el.setAttribute('data-tmedit', '1');
       el.classList.add('tm-edit');
+      // Paste as plain text. Pasting from Google Docs or Word otherwise carries
+      // inline font-family/color styles that beat the page CSS and, on dark
+      // blocks, render black text on a dark background.
+      el.addEventListener('paste', function(ev){
+        ev.preventDefault();
+        var cb = ev.clipboardData || window.clipboardData;
+        var txt = cb ? cb.getData('text/plain') : '';
+        if(!txt) return;
+        if(document.queryCommandSupported && document.queryCommandSupported('insertText')){
+          document.execCommand('insertText', false, txt);
+        } else {
+          var sel = window.getSelection();
+          if(!sel || !sel.rangeCount) return;
+          sel.deleteFromDocument();
+          sel.getRangeAt(0).insertNode(document.createTextNode(txt));
+          sel.collapseToEnd();
+        }
+      });
     });
     wrap.querySelectorAll('.idea-card').forEach(function(card){
       if(card.querySelector('.tm-chip')) return;
@@ -853,7 +938,7 @@ window.addEventListener("load", function(){
     return fetch(DB_URL + '/drafts/' + DOC_KEY + '.json', {
       method: 'PUT',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(html)
+      body: JSON.stringify({html: html, build: BUILD_ID})
     }).then(function(r){ if(!r.ok) throw new Error('http ' + r.status); });
   }
   function resetDraft(){
@@ -874,6 +959,20 @@ window.addEventListener("load", function(){
     .then(function(r){ if(!r.ok) throw new Error('http ' + r.status); return r.json(); })
     .then(function(v){
       clearTimeout(t);
+      // A draft saved against an older build must NOT be restored: it would
+      // silently paint the previous version over newer content and the reader
+      // would never know the page had moved on. Legacy drafts saved as a bare
+      // string carry no build id, so those still restore as before.
+      if(v && typeof v === 'object' && v.html){
+        if(v.build && v.build !== BUILD_ID){
+          done = true;
+          initEdit();
+          setStatus('This page was updated after your last edit. Your older draft was not applied.', 'warn');
+          return;
+        }
+        finish(v.html);
+        return;
+      }
       finish((typeof v === 'string' && v) ? v : localStorage.getItem(LOCAL_KEY));
     })
     .catch(function(){
@@ -929,7 +1028,7 @@ window.addEventListener("load", function(){
     var blob = new Blob([html], {type:'text/html'});
     var a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    a.download = 'hedonia-strategy-FINAL.html';
+    a.download = 'hedonia-v2-strategy-FINAL.html';
     document.body.appendChild(a);
     a.click();
     setTimeout(function(){ a.remove(); URL.revokeObjectURL(a.href); }, 500);
